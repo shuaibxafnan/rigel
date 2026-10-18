@@ -3,497 +3,387 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio</title>
+    <title>Shuaib Afnan | Data scientist and web developer</title>
+    <meta name="description" content="Portfolio of Shuaib Afnan: data science, machine learning and web development.">
+    <script>
+        (function () {
+            var d = document.documentElement;
+            d.classList.add("js");
+            try {
+                var t = localStorage.getItem("theme");
+                d.setAttribute("data-theme", t === "light" ? "light" : "dark");
+            } catch (e) { d.setAttribute("data-theme", "dark"); }
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="jarallax.css">
-    <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="home">
-        <header>
-            <a href="#" class="logo">
-                <h4>PortFolio.</h4>
-            </a>
-            <div class="rightSide">
-                <div class="btns dayNight">
-                    <ion-icon name="moon-outline"></ion-icon>
-                    <ion-icon name="sunny-outline"></ion-icon>
-                </div>
-                <div class="btns menuToggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                    <ion-icon name="close-outline"></ion-icon>
-                </div>
+    <div class="pre" id="pre" aria-hidden="true">
+        <span class="pre-name">Shuaib Afnan</span>
+        <span class="pre-count" id="preCount">0</span>
+    </div>
+
+    <div class="cur-ring" id="curRing" aria-hidden="true"><span id="curLabel"></span></div>
+    <div class="cur-dot" id="curDot" aria-hidden="true"></div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <header class="top">
+        <a class="logo" href="#home" aria-label="Shuaib Afnan, home">S<span>.</span>A</a>
+        <button class="theme" id="themeBtn" aria-label="Switch to light theme">
+            <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                    d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+            <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
+            </svg>
+        </button>
+    </header>
+
+    <nav class="dock" id="dock" aria-label="Sections">
+        <a href="#home" data-s="home" class="on">Home</a>
+        <a href="#about" data-s="about">About</a>
+        <a href="#journey" data-s="journey">Journey</a>
+        <a href="#skills" data-s="skills">Skills</a>
+        <a href="#work" data-s="work">Work</a>
+        <a href="#contact" data-s="contact">Contact</a>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="wrap hero-main">
+                <p class="hello rv" style="--d:.45s">Hello there... Welcome to my portfolio</p>
+                <h1 class="name" aria-label="Shuaib Afnan">
+                    <span class="line" aria-hidden="true"><span>Shuaib</span></span>
+                    <span class="line" aria-hidden="true"><span>Afnan</span></span>
+                </h1>
+                <p class="iam rv" style="--d:.8s">
+                    <span>I am a</span>
+                    <span class="roller" id="roller"><span class="roll-track" id="rollTrack"><b>Data Scientist</b><b>Web
+                                Developer</b><b>Data Analyst</b><b>Coder</b></span></span>
+                </p>
             </div>
-        </header>
-        <section class="main">
-
-            <div class="backLit">
-                <div>
-
-                </div>
-            </div>
-            <div class="upDiv">
-                <div class="left">
-                    <h2>Hello There...</h2>
-                    <h2>Welcome to My Portfolio</h2>
-                </div>
-                <div class="right">
-                    <div class="images-decor">
-                        <img src="Images/vecteezy_irregular-freeform-aesthetic-abstract-handdraw-organic-shape_11420759_915.png"
-                            alt="" class="decor1">
-                        <img src="Images/vecteezy_irregular-freeform-aesthetic-abstract-handdraw-organic-shape_11420759_915.png"
-                            alt="" class="decor2">
-
+            <div class="wrap hero-foot rv" style="--d:1s">
+                <dl class="facts">
+                    <div>
+                        <dt class="mono">Focus</dt>
+                        <dd>Data science, machine learning and web development</dd>
                     </div>
-                    <div class="images-main">
-                        <img src="Images/person-6877458-5638294.webp" alt="" class="stylish">
-                        <img src="Images/details.png" alt="" class="decor3">
-                        <div class="text-decor">
-                            <h2>I Am A....</h2>
-                            <h1 class="layer" data-speed="2"><span class="multi-text"></span></h1>
+                    <div>
+                        <dt class="mono">Education</dt>
+                        <dd>B.S, Abdur Rahman Crescent University, 2020 to 2024</dd>
+                    </div>
+                    <div>
+                        <dt class="mono">Languages</dt>
+                        <dd>English, Japanese, German</dd>
+                    </div>
+                </dl>
+                <a class="scroll" href="#about"><span>Scroll</span><i></i></a>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="wrap">
+                <div class="sec-head"><span class="mono">01</span><span class="mono">In my words...</span></div>
+                <p class="statement" id="statement">I am a passionate learner who likes to spend time learning new
+                    things and increasing knowledge. I put my best into every work I do, and I am fully inspired by Data
+                    Science and the possibilities it brings.</p>
+
+                <div class="about">
+                    <figure class="photo tilt" data-cursor="Hi">
+                        <img src="Images/IMG-20220704-WA0014.jpg" alt="Shuaib Afnan" loading="lazy">
+                        <figcaption class="mono">Shuaib Afnan</figcaption>
+                    </figure>
+                    <div class="about-copy">
+                        <h2>I'm Shuaib Afnan.</h2>
+                        <p>Know more about me and my work.</p>
+                        <a class="btn mag" href="Shuaib%20Afnan's%20Resume.pdf" download><span>Download CV</span><svg
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 4v11M7 11l5 5 5-5M5 20h14" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey -->
+        <section class="section" id="journey">
+            <div class="wrap">
+                <div class="sec-head"><span class="mono">02</span>
+                    <h2 class="sec-title">Journey</h2>
+                </div>
+
+                <div class="row">
+                    <h3 class="row-label">Qualification</h3>
+                    <ol class="tl" id="tl">
+                        <span class="tl-line"><i id="tlFill"></i></span>
+                        <li><span class="dot"></span><time class="mono">2020 to 2024</time>
+                            <h4>B.S Abdur Rahman Crescent University of Institute and Technology</h4>
+                        </li>
+                        <li><span class="dot"></span><time class="mono">2018 to 2020</time>
+                            <h4>Narayana Junior College</h4>
+                        </li>
+                        <li><span class="dot"></span><time class="mono">2006 to 2018</time>
+                            <h4>KKR Gowtham English Medium High School</h4>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="row">
+                    <h3 class="row-label">Courses</h3>
+                    <div class="courses">
+                        <article class="course tilt"><span class="mono">Verzeo</span>
+                            <h4>Deep Learning</h4>
+                        </article>
+                        <article class="course tilt"><span class="mono">Simplilearn</span>
+                            <h4>Data Analysis</h4>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="row-label">Languages</h3>
+                    <div class="langs">
+                        <div class="lang" data-v=".92">
+                            <svg viewBox="0 0 100 100" aria-hidden="true">
+                                <circle class="trk" cx="50" cy="50" r="42" />
+                                <circle class="val" cx="50" cy="50" r="42" />
+                            </svg>
+                            <h4>English</h4><span class="mono">Advanced</span>
+                        </div>
+                        <div class="lang" data-v=".62">
+                            <svg viewBox="0 0 100 100" aria-hidden="true">
+                                <circle class="trk" cx="50" cy="50" r="42" />
+                                <circle class="val" cx="50" cy="50" r="42" />
+                            </svg>
+                            <h4>Japanese</h4><span class="mono">Intermediate</span>
+                        </div>
+                        <div class="lang" data-v=".3">
+                            <svg viewBox="0 0 100 100" aria-hidden="true">
+                                <circle class="trk" cx="50" cy="50" r="42" />
+                                <circle class="val" cx="50" cy="50" r="42" />
+                            </svg>
+                            <h4>German</h4><span class="mono">Novice</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <ul class="navigation">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-    <div class="parallax">
-        <div class="sec sec1"></div>
-        <div class="sec sec2"></div>
-        <h1>ABOUT</h1>
-    </div>
-    <div class="image-img">
 
-    </div>
-    <div id="about">
-        <div class="aboutOne slide-in">
-            <div class="myimg">
-                <div class="myimg-left">
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <div class="wrap">
+                <div class="sec-head"><span class="mono">03</span>
+                    <h2 class="sec-title">Skills</h2>
+                </div>
 
+                <div class="filters" id="filters" role="group" aria-label="Filter skills">
+                    <button class="f on" data-cat="all" aria-pressed="true">All</button>
+                    <button class="f" data-cat="prog" aria-pressed="false"><i></i>Programming languages</button>
+                    <button class="f" data-cat="ml" aria-pressed="false"><i></i>Machine learning</button>
+                    <button class="f" data-cat="dl" aria-pressed="false"><i></i>Deep learning</button>
+                    <button class="f" data-cat="nlp" aria-pressed="false"><i></i>Natural language processing</button>
+                    <button class="f" data-cat="data" aria-pressed="false"><i></i>Data analysis</button>
                 </div>
-                <div class="myimg-right">
-                    <div></div>
-                    <div></div>
-                    <img src="Images/Screenshot_20220711-143228_Instagram.png" alt="" class="slide-in">
-                </div>
+
+                <ul class="cloud" id="cloud">
+                    <li data-cat="prog">Python</li>
+                    <li data-cat="ml">Sklearn</li>
+                    <li data-cat="dl">Tensorflow</li>
+                    <li data-cat="nlp">Transformers</li>
+                    <li data-cat="data">Pandas</li>
+                    <li data-cat="prog">JavaScript</li>
+                    <li data-cat="ml">Dimensionality Reduction</li>
+                    <li data-cat="dl">ResNet</li>
+                    <li data-cat="nlp">BERT</li>
+                    <li data-cat="data">NumPy</li>
+                    <li data-cat="prog">HTML/CSS</li>
+                    <li data-cat="ml">Classification</li>
+                    <li data-cat="dl">CNN Models</li>
+                    <li data-cat="nlp">Text Preprocessing</li>
+                    <li data-cat="data">Feature Engineering</li>
+                    <li data-cat="prog">Flask</li>
+                    <li data-cat="ml">Regression</li>
+                    <li data-cat="dl">RNN Models</li>
+                    <li data-cat="nlp">Attention Models</li>
+                    <li data-cat="data">Exploratory Data Analysis</li>
+                    <li data-cat="prog">R Programming</li>
+                    <li data-cat="ml">Clustering</li>
+                    <li data-cat="dl">NN Models</li>
+                    <li data-cat="nlp">Text Summarization</li>
+                    <li data-cat="data">Data Analytics</li>
+                    <li data-cat="prog">SQL</li>
+                    <li data-cat="ml">Time Series</li>
+                    <li data-cat="nlp">GRU</li>
+                    <li data-cat="data">Big Data</li>
+                </ul>
             </div>
-            <div class="rightOne">
-                <div class="rightSpace">
+        </section>
 
+        <!-- Work -->
+        <section class="work" id="work">
+            <div class="work-pin">
+                <div class="work-head">
+                    <h2 class="sec-title">Academic projects</h2>
+                    <span class="mono" id="workCount">01 / 03</span>
                 </div>
-                <div class="rightOnetxt slide-in">
-                    <div class="rightOnetxttxt">
-                        <h1>In My Words...</h1>
-                        <p>I am A Passionate Learner who likes to spend time in learning new things and increasing
-                            knowledge, I Put up my best in every work I do and I am Fully inspired by Data Science and
-                            the possibilities it brings...</p>
-                    </div>
+                <div class="work-track" id="workTrack">
+                    <article class="panel">
+                        <div class="panel-text">
+                            <span class="mono idx">01</span>
+                            <h3>Anime Recommendation System</h3>
+                            <p>An anime recommendation system with content-based, popularity-based and collaborative
+                                filtering methods to recommend anime to users. It also recommends anime based on the
+                                mood the user selects, and works on the cosine similarity algorithm.</p>
+                            <ul class="tags">
+                                <li>Content-based</li>
+                                <li>Popularity-based</li>
+                                <li>Collaborative filtering</li>
+                                <li>Cosine similarity</li>
+                            </ul>
+                            <a class="btn mag"
+                                href="https://github.com/SatoruGojo1110/Anime-Recommendation-System"><span>Know
+                                    more</span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a>
+                        </div>
+                        <a class="shot tilt" href="https://github.com/SatoruGojo1110/Anime-Recommendation-System"
+                            data-cursor="Open" aria-label="Anime Recommendation System on GitHub"><img
+                                src="Images/animeAbout.jpeg" alt="" loading="lazy"></a>
+                    </article>
+                    <article class="panel">
+                        <div class="panel-text">
+                            <span class="mono idx">02</span>
+                            <h3>Fashion Recommendation System</h3>
+                            <p>An e-commerce website built on a ResNet deep learning model. It uses the K-Nearest
+                                Neighbors algorithm to find the most similar products to any product the user selects.
+                            </p>
+                            <ul class="tags">
+                                <li>ResNet</li>
+                                <li>K-Nearest Neighbors</li>
+                                <li>E-commerce</li>
+                            </ul>
+                            <a class="btn mag" href="https://github.com/SatoruGojo1110/My_ecommerce_website"><span>Know
+                                    more</span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a>
+                        </div>
+                        <a class="shot tilt" href="https://github.com/SatoruGojo1110/My_ecommerce_website"
+                            data-cursor="Open" aria-label="Fashion Recommendation System on GitHub"><img
+                                src="Images/fashion.jpg" alt="" loading="lazy"></a>
+                    </article>
+                    <article class="panel">
+                        <div class="panel-text">
+                            <span class="mono idx">03</span>
+                            <h3>Predictive system</h3>
+                            <p>A machine learning predictive system with real-time flight price prediction, stock price
+                                prediction, and a health predictor for whether a person has diabetes. Each predictor is
+                                built on a powerful machine learning algorithm.</p>
+                            <ul class="tags">
+                                <li>Flight prices</li>
+                                <li>Stock prices</li>
+                                <li>Diabetes prediction</li>
+                            </ul>
+                            <a class="btn mag"
+                                href="https://github.com/SatoruGojo1110/Recommendation_systems"><span>Know
+                                    more</span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a>
+                        </div>
+                        <a class="shot tilt" href="https://github.com/SatoruGojo1110/Recommendation_systems"
+                            data-cursor="Open" aria-label="Predictive system on GitHub"><img src="Images/stock.jpg"
+                                alt="" loading="lazy"></a>
+                    </article>
                 </div>
+                <div class="work-bar" aria-hidden="true"><i id="workBar"></i></div>
             </div>
-            <div class="mydetails">
-                <div class="detailsTxt">
-                    <div class="dteailstxttxt slide-in">
-                        <h1>I'm Shuaib Afnan</h1>
-                        <h2>Know More About Me and My Work's....</h2>
-                        <a href="Shuaib Afnan's Resume.pdf"><button class="cv" download>Download CV</button></a>
-                    </div>
-                </div>
-                <div class="detailSpace">
+        </section>
 
-                </div>
-            </div>
-        </div>
-    </div>
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="wrap">
+                <div class="sec-head"><span class="mono">05</span><span class="mono">Contact me</span></div>
+                <h2 class="big">Let's talk.</h2>
 
-    <div id="profile">
-        <div class="profile-left">
-            <img src="Images/IMG-20220704-WA0014.jpg" alt="">
-            <div class="absoluteBorder">
-                <div class="right-border slide-in">
-
-                </div>
-            </div>
-            <div class="absoluteBorder2">
-                <div class="left-border slide-in">
-
-                </div>
-            </div>
-        </div>
-        <div class="profile-right">
-            <div class="studies">
-                <div class="header-txt">
-                    <h2><i class="fa-solid fa-graduation-cap"></i>Qualification</h2>
-                </div>
-                <div class="btech slide-in">
-                    <div class="schoolleft">
-                        <div class="dot1">
-
-                        </div>
-                        <div class="line">
-
-                        </div>
-                        <div class="dot2">
-
-                        </div>
-                    </div>
-                    <div class="schoolright">
-
-                        <h3>B.S Abdur Rahman Crescent University of Institute and Technology</h3>
-                        <p>2020-2024</p>
-                    </div>
-                </div>
-                <div class="college slide-in">
-                    <div class="schoolleft">
-                        <div class="dot1">
-
-                        </div>
-                        <div class="line">
-
-                        </div>
-                        <div class="dot2">
-
-                        </div>
-                    </div>
-                    <div class="schoolright">
-                        <h3>Narayana Junior College</h3>
-                        <p>2018-2020</p>
-                    </div>
-                </div>
-
-                <div class="school slide-in">
-                    <div class="schoolleft">
-                        <div class="dot1">
-
-                        </div>
-                        <div class="line">
-
-                        </div>
-                        <div class="dot2">
-
-                        </div>
-                    </div>
-                    <div class="schoolright">
-                        <h3>KKR Gowtham English Medium High School</h3>
-                        <p>2006-2018</p>
-                    </div>
-                </div>
-            </div>
-            <div class="experience">
-                <div class="header-txt">
-                    <h2><i class="fa-solid fa-briefcase"></i>Courses</h2>
-                </div>
-                <div class="school slide-in">
-                    <div class="schoolleft">
-                        <div class="dot1">
-
-                        </div>
-                        <div class="line">
-
-                        </div>
-                        <div class="dot2">
-
-                        </div>
-                    </div>
-                    <div class="schoolright">
-                        <h3>Deep Learning From Verzeo</h3>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="school slide-in">
-                    <div class="schoolleft">
-                        <div class="dot1">
-
-                        </div>
-                        <div class="line">
-
-                        </div>
-                        <div class="dot2">
-
-                        </div>
-                    </div>
-                    <div class="schoolright">
-                        <h3>Data Analysis from Simplilearn</h3>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="studies">
-                <div class="header-txt">
-                    <h2><i class="fa-solid fa-graduation-cap"></i>Language's</h2>
-                </div>
-                <div class="school slide-in">
-                    <div class="schoolleft">
-                        <div class="dot1">
-
-                        </div>
-                        <div class="line">
-
-                        </div>
-                        <div class="dot2">
-
-                        </div>
-                    </div>
-                    <div class="schoolright">
-
-                        <h3>English</h3>
-                        <p>Advanced</p>
-                    </div>
-                </div>
-                <div class="school slide-in">
-                    <div class="schoolleft">
-                        <div class="dot1">
-
-                        </div>
-                        <div class="line">
-
-                        </div>
-                        <div class="dot2">
-
-                        </div>
-                    </div>
-                    <div class="schoolright">
-                        <h3>Japanese</h3>
-                        <p>Intermediate</p>
-                    </div>
-                </div>
-                <div class="school slide-in">
-                    <div class="schoolleft">
-                        <div class="dot1">
-
-                        </div>
-                        <div class="line">
-
-                        </div>
-                        <div class="dot2">
-
-                        </div>
-                    </div>
-                    <div class="schoolright">
-                        <h3>German</h3>
-                        <p>Novice</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="skills">
-        <h2 class="skills-media">SKILLS</h2>
-        <div class="skill-list">
-            <div class="skill-card s1 slide-in">
-                <div class="skill-head">
-                    <img src="icons/program.svg" alt="">
-                    <div class="topic">
-                        <h2>Programming Languages</h2>
-                        <h3>Python</h3>
-                        <h3>JavaScript</h3>
-                        <h3>HTML/CSS</h3>
-                        <h3>Flask</h3>
-                        <h3>R Programming</h3>
-                        <h3>SQL</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-card s2 slide-in">
-                <div class="skill-head">
-                    <img src="icons/coding.svg" alt="">
-                    <div class="topic">
-                        <h2>Machine Learning</h2>
-                        <h3>Sklearn</h3>
-                        <h3>Dimensionality Reduction</h3>
-                        <h3>Classification</h3>
-                        <h3>Regression</h3>
-                        <h3>Clustering</h3>
-                        <h3>Time Series</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-card s3 slide-in">
-                <div class="skill-head">
-                    <img src="icons/deep.svg" alt="">
-                    <div class="topic">
-                        <h2>Deep Learning</h2>
-                        <h3>Tensorflow</h3>
-                        <h3>ResNet</h3>
-                        <h3>NN-Models</h3>
-                        <h3>CNN-Models</h3>
-                        <h3>RNN-Models</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-card s4 slide-in">
-                <div class="skill-head">
-                    <img src="icons/robot.svg" alt="">
-                    <div class="topic">
-                        <h2>Natural Language Processing</h2>
-                        <h3>Text Preprocessing</h3>
-                        <h3>Text Summarization</h3>
-                        <h3>Attention Models</h3>
-                        <h3>Transformers</h3>
-                        <h3>Bert</h3>
-                        <h3>GRU</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-card s5 slide-in">
-                <div class="skill-head">
-                    <img src="icons/analysis.svg" alt="">
-                    <div class="topic">
-                        <h2>Data Analysis</h2>
-                        <h3>Feature Engineering</h3>
-                        <h3>Exploratory Data Analysis</h3>
-                        <h3>Data Analytics</h3>
-                        <h3>Big Data</h3>
-                        <h3>Pandas</h3>
-                        <h3>Numpy</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="projects">
-        <div class="myWorks">
-            <div class="box">
-                <h2 data-jarallax-element="0 -200">Anime Recommendation System</h2>
-                <div class="container">
-                    <div class="imgBx">
-
-                    </div>
-                    <div class="content" data-jarallax-element="-200 0">
-                        <p>An Anime Recommendation System which has Content-Based, Popularity Based and Collabarative
-                            Filtering methods to Recommend anime to users, also it recommends anime on basis of user
-                            mood on whatever mood he selects. Works on Cosine Similarity Algorithm.</p>
-                        <button><a href="https://github.com/SatoruGojo1110/Anime-Recommendation-System">Know More<i
-                                    class="fa-solid fa-circle-chevron-right"></i></a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="myWorks btw">
-            <div class="box">
-                <h2 data-jarallax-element="0 200">Fashion Recommendation System</h2>
-                <div class="container">
-                    <div class="imgBx">
-
-                    </div>
-                    <div class="content" data-jarallax-element="-200 0">
-                        <p>A Ecommerce website which is trained on Resnet model of Deep Learning and uses a Machine
-                            Learning Algorithm K-Nearest Neighbors for finding the most similar products for any product
-                            user has selected.</p>
-                        <button><a href="https://github.com/SatoruGojo1110/My_ecommerce_website">Know More<i
-                                    class="fa-solid fa-circle-chevron-right"></i></a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="myWorks">
-            <div class="box">
-                <h2 data-jarallax-element="0 -200">Predictive system</h2>
-                <div class="container">
-                    <div class="imgBx">
-
-                    </div>
-                    <div class="content" data-jarallax-element="-200 0">
-                        <p>A Machine Learning Predictive system which has real time Flight Price Prediction, Stock Price
-                            Prediction and health prediction whether a person has daibetes or not. Each of the predictor
-                            are bulit on a powerful Machine learning Algorithms.</p>
-                        <button><a href="https://github.com/SatoruGojo1110/Recommendation_systems">Know More<i
-                                    class="fa-solid fa-circle-chevron-right"></i></a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="contact">
-        <div class="contact-content">
-            <div class="contact-left">
-                <h2>Contact-Me</h2>
-            </div>
-            <div class="contact-right">
-                <div class="contact-card">
-                    <form name="submit-to-google-sheet">
-                        <i></i>
-                        <input type="text" id="" name="Name" class="credentials" placeholder="Name" required>
-                        <input type="email" id="" name="Email" class="credentials" placeholder="Email" required>
-                        <textarea id="" cols="25" rows="10" name="Message" class="txtarea" placeholder="Message"
-                            required></textarea>
-                        <button type="submit" class="btn">Sumbit</button>
-                        <span id="msg"></span>
+                <div class="contact">
+                    <form name="submit-to-google-sheet" id="contactForm">
+                        <label for="cName">Name</label>
+                        <input type="text" id="cName" name="Name" autocomplete="name" required>
+                        <label for="cEmail">Email</label>
+                        <input type="email" id="cEmail" name="Email" autocomplete="email" required>
+                        <label for="cMsg">Message</label>
+                        <textarea id="cMsg" name="Message" rows="4" required></textarea>
+                        <button class="btn mag" type="submit" id="sendBtn"><span>Submit</span><svg viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></button>
+                        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                     </form>
+
+                    <ul class="links">
+                        <li style="--c:#f2c200"><a href="tel:7075818209"><span
+                                    class="mono">Phone</span><b>7075818209</b><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a></li>
+                        <li style="--c:#ea4335"><a href="mailto:shuaibafnansk@gmail.com"><span
+                                    class="mono">Email</span><b>shuaibafnansk</b><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a></li>
+                        <li style="--c:#5865f2"><a href="https://discordapp.com/users/736225575655440497"><span
+                                    class="mono">Discord</span><b>Discord</b><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a></li>
+                        <li style="--c:#c13584"><a href="https://instagram.com/shuaib_11x?igshid=ZDdkNTZiNTM="><span
+                                    class="mono">Instagram</span><b>shuaib_11x</b><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a></li>
+                        <li style="--c:#0a66c2"><a href="https://www.linkedin.com/in/shuaib-afnan/"><span
+                                    class="mono">LinkedIn</span><b>shuaib-afnan</b><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a></li>
+                        <li style="--c:#8b949e"><a href="https://github.com/SatoruGojo1110"><span
+                                    class="mono">GitHub</span><b>SatoruGojo1110</b><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a></li>
+                        <li style="--c:#00acee"><a href="#"><span class="mono">Twitter</span><b>Twitter</b><svg
+                                    viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 17L17 7M8 7h9v9" />
+                                </svg></a></li>
+                    </ul>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="marq" aria-hidden="true">
+            <div class="marq-track">
+                <span>Data Scientist &#8226; Web Developer &#8226; Data Analyst &#8226; Coder &#8226; </span>
+                <span>Data Scientist &#8226; Web Developer &#8226; Data Analyst &#8226; Coder &#8226; </span>
+            </div>
         </div>
-        <div class="contents">
-            <ul class="sci">
-                <li data-text="7075818209" data-clr="#FFD700" class="li">
-                    <a href="#" class="phone"><i class="fa-solid fa-phone fa" aria-hidden="true"></i></a>
-                </li>
-                <li data-text="shuaibafnansk" data-clr="#ff0000" class="li">
-                    <a href="#" class="gmail"><i class="fa-regular fa-envelope fa" aria-hidden="true"></i></a>
-                </li>
-                <li data-text="Discord" data-clr="#5865f2" class="li">
-                    <a href="https://discordapp.com/users/736225575655440497" class="discord"><i
-                            class="fa-brands fa-discord fa" aria-hidden="true"></i></a>
-                </li>
-                <li data-text="Instagram" data-clr="#8134af" class="li">
-                    <a href="https://instagram.com/shuaib_11x?igshid=ZDdkNTZiNTM=" class="instagram"><i
-                            class="fa-brands fa-instagram fa" aria-hidden="true"></i></a>
-                </li>
-                <li data-text="LinkedIn" data-clr="#0a66c2" class="li">
-                    <a href="https://www.linkedin.com/in/shuaib-afnan/" class="linkedin"><i
-                            class="fa-brands fa-linkedin-in fa" aria-hidden="true"></i></a>
-                </li>
-                <li data-text="GitHub" data-clr="#171515" class="li">
-                    <a href="https://github.com/SatoruGojo1110" class="github"><i class="fa-brands fa-github fa"
-                            aria-hidden="true"></i></a>
-                </li>
-                <li data-text="Twitter" data-clr="#00acee" class="li">
-                    <a href="#" class="twitter"><i class="fa-brands fa-twitter fa" aria-hidden="true"></i></a>
-                </li>
-            </ul>
+        <div class="wrap foot-in">
+            <span>Made by Shuaib Afnan</span>
+            <a href="#home">Back to top</a>
         </div>
-    </div>
-    <footer>
-        <h2>Made by ShuaibAfnan <i class="fa-solid fa-heart"></i></h2>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="index.js"></script>
-    <script src="jarallax.js"></script>
-    <script src="jarallax-element.js"></script>
-    <script src="vanilla-tilt.min.js"></script>
-    <script>
-        let list = document.querySelectorAll('.sci li');
-        let bg = document.querySelector('.contents');
-        list.forEach(elements => {
-            elements.addEventListener("mouseenter", (event) => {
-                let color = event.target.getAttribute('data-clr');
-                bg.style.backgroundColor = color;
-            })
-            elements.addEventListener("mouseleave", (event) => {
-                bg.style.backgroundColor = '#fff';
-            })
-        })
 
-        VanillaTilt.init(document.querySelectorAll(".sci li a"), {
-            max: 25,
-            speed: 400,
-            glare: true,
-            "max-glare": 1,
-        });
-    </script>
-
+    <script src="index.js" defer></script>
 </body>
-
 </html>
